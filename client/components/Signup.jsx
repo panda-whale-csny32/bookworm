@@ -8,25 +8,26 @@ const Signup = () => {
     // const [username, changeUsername] = useInput('');
     // const [password, changePassword] = useInput('');
     // const [email, changeEmail] = useInput('');
-   
+
     const navigate =  useNavigate()
     const routeChange = () => {
         let path = '/'
         if(Signedup){
             path='/home'
-        } 
-        
+        }
+
         navigate(path);
     }
 
     //write logic to check if signup is sucessful. if so, set state to true, and navigate to home page
+
     const Signup = async () => {
         const username = document.querySelector('#username').value
         const password = document.querySelector('#password').value
         const email = document.querySelector('#email').value
         console.log(username,password,email)
         console.log('sending signup request')
-        if(username === ''){setMessage('Please provide a username')} 
+        if(username === ''){setMessage('Please provide a username')}
         else if(password === ''){setMessage('Please provide a password')}
         else if (email === ''){setMessage('Please provide an email')}
         if(username !=='' && password !== ''){
@@ -59,9 +60,9 @@ const Signup = () => {
     }
     }
     }
-    
+
     return (
-    <div>
+    <div className="splashPage">
     <h1>Signup</h1>
     <form className = "signup">
 
@@ -72,11 +73,11 @@ const Signup = () => {
        <div className = "signButton"> <Button onClick = {Signup} className= "buttons" size="small" color="secondary" variant="contained">Submit</Button><Button className= "buttons" size="small" color="secondary" variant="contained" onClick={routeChange}>Back</Button></div>
     </form>
     </div>
-    //create an input form with a username and password 
+    //create an input form with a username and password
         //create a button attached to a post request that will send the username and password to the backend.
         //backend will validate username and password exists in database and send back a 200 status with username in the response object
         //if login is successful, set logged in state to true, navigate to /home route. If login fails, display login failed message to user.
-    
+
     )
 
 
