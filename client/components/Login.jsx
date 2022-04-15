@@ -60,8 +60,8 @@ const Login = () => {
      <div className="splashPage">
     <h1>Login</h1>
     <form className ="signup">
-      <div> <label>Username: </label> <input onChange = {usernameChange}type="text" ></input></div>
-       <div> <label>Password:</label> <input onChange = {passwordChange} type="text"></input></div>
+      <div> <label className = 'label'>Username: </label> <input className = 'input' onChange = {usernameChange}type="text" ></input></div>
+       <div> <label className = 'label'>Password:</label> <input className = 'input' onChange = {passwordChange} type="text"></input></div>
        <label>{message}</label>
        <div className="signButton"><Button onClick={()=> {loggedIn}}
      className= "buttons" size="small" color="secondary" variant="contained">Submit</Button><Button className= "buttons" size="small" color="secondary" variant="contained" onClick={routeChange} >Back</Button></div>

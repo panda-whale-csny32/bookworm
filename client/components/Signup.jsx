@@ -66,9 +66,9 @@ const Signup = () => {
     <h1>Signup</h1>
     <form className = "signup">
 
-    <div><label>Username:</label> <input className = "username" type="text"></input></div>
-    <div><label>Password:</label> <input className = "password" type="password"></input></div>
-    <div><label>Email:   </label><input className ="email"  type="text"></input></div>
+    <div><label className = 'label'>Username:</label> <input className = "input" type="text"></input></div>
+    <div><label className = 'label'>Password:</label> <input className = "input" type="password"></input></div>
+    <div><label className = 'label'>Email:   </label><input className ="input"  type="text"></input></div>
     <label>{message}</label>
        <div className = "signButton"> <Button onClick = {Signup} className= "buttons" size="small" color="secondary" variant="contained">Submit</Button><Button className= "buttons" size="small" color="secondary" variant="contained" onClick={routeChange}>Back</Button></div>
     </form>
